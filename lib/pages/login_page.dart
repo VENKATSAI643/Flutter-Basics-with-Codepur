@@ -67,10 +67,14 @@ class _LoginpageState extends State<Loginpage> {
                       Navigator.of(context)
                           .pushReplacementNamed(MyRoutes.homeRoute);
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors
+                          .green, // Change this color to your desired color
+                    ),
                     child: const Text(
                       "Login",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

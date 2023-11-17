@@ -4,10 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_1/pages/Login_page.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
+  const Myapp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,9 +22,9 @@ class Myapp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => Loginpage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => Loginpage()
+        "/": (context) => const Loginpage(),
+        "/home": (context) =>const HomePage(),
+        "/login": (context) => const Loginpage()
       },
     );
   }
