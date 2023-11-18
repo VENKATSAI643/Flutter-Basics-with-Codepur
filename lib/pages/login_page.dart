@@ -10,6 +10,7 @@ class Loginpage extends StatefulWidget {
 
 class _LoginpageState extends State<Loginpage> {
   String name = "";
+  bool changeButton = false;
 
   @override
   Widget build(BuildContext context) {
@@ -62,14 +63,48 @@ class _LoginpageState extends State<Loginpage> {
                   const SizedBox(
                     height: 20.0,
                   ),
-                  ElevatedButton(
+                  InkWell(
+                    onTap: () async {
+                      setState(() {
+                        changeButton = true;
+                      });
+                      await Future.delayed(Duration(seconds: 1));
+                      Navigator.of(context)
+                          .pushReplacementNamed(MyRoutes.homeRoute);
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: changeButton ? 50.0 : 200,
+                      height: 50.0,
+                      alignment: Alignment.center,
+                      child: changeButton
+                          ? Icon(
+                              Icons.done,
+                              color: Colors.white,
+                            )
+                          : Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
+                      decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                          // shape: changeButton?BoxShape.circle:BoxShape.rectangle,
+                          borderRadius:
+                              BorderRadius.circular(changeButton ? 50 : 8)),
+                    ),
+                  )
+
+                  /*ElevatedButton(
                     onPressed: () {
                       Navigator.of(context)
                           .pushReplacementNamed(MyRoutes.homeRoute);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors
-                          .green, // Change this color to your desired color
+                          .green,
                     ),
                     child: const Text(
                       "Login",
@@ -78,7 +113,7 @@ class _LoginpageState extends State<Loginpage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  )
+                  )*/
                 ],
               ),
             )
