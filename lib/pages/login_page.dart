@@ -122,24 +122,6 @@ class _LoginpageState extends State<Loginpage> {
                         ),
                       ),
                     )
-
-                    /*ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(MyRoutes.homeRoute);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors
-                            .green,
-                      ),
-                      child: const Text(
-                        "Login",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    )*/
                   ],
                 ),
               )
