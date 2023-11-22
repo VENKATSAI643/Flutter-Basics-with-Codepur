@@ -13,11 +13,15 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.light,
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.lato().fontFamily,
-          primaryTextTheme: GoogleFonts.latoTextTheme()),
-      themeMode: ThemeMode.light,
+          appBarTheme: const AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+          )),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
