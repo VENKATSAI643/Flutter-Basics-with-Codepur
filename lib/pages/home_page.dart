@@ -18,10 +18,8 @@ class HomePage extends StatelessWidget {
               style: TextStyle(color: Colors.black),
             ),
           )),
-      body: Center(
-        child: Container(
-          child: Text("Welcome to $days days of flutter by $name by venkat"),
-        ),
+      body: const Center(
+        child: Text("Welcome to $days days of flutter by $name by venkat"),
       ),
       drawer: const MyDrawer(),
     );
