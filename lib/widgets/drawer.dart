@@ -33,6 +33,7 @@ class MyDrawer extends StatelessWidget {
               ),
               title: Text(
                 "Home",
+                // ignore: deprecated_member_use
                 textScaleFactor: 1.2,
                 style: TextStyle(color: Colors.white),
               ),
@@ -44,6 +45,7 @@ class MyDrawer extends StatelessWidget {
               ),
               title: Text(
                 "Profile",
+                // ignore: deprecated_member_use
                 textScaleFactor: 1.2,
                 style: TextStyle(color: Colors.white),
               ),
